@@ -1,0 +1,51 @@
+title: "Chalupa Žacléř"
+undertitle: "Ubytování u Prkenného Dolu"
+
+
+sectionDescription: "Popis chalupy"
+sectionDescriptionMain: "Přijeďte k nám do nového, útulně vybaveného horského srubu. Nechte se unášet v teple ať už vnitřního či venkovního krbu, který zajisté oceníte při posezení na terase s krásným výhledem v tiché a krásné Krkonošské krajině pod zalesněným hřebenem. Samozřejmostí je WiFi pokrytí objektu a jeho blízkého okolí. V létě se neváhejte poddat radovánkám u bazénu a v zimě můžete využít zasněženou stráň k sáňkování. Pro vaše ohřátí může posloužit jak zmíněný krb, tak i elektrické topení."
+sectionDescriptionUndertitleOne: "V přízemí"
+sectionDescriptionUndertitleOneText: "Nachází se zde vstupní místnost vhodná například pro uložení kol či lyží. Dále prostorná místnost rozdělena na obývací pokoj (krb, TV + SAT, pohovka s možností přistýlky, jídelní stůl + židle, žehlicí prkno s žehličkou), kuchyňský kout (kuchyňská linka, vestavěná lednice, mikrovlnná trouba, rychlovarná konvice, vestavěná elektrická sklokeramická deska, toustovač, kávovar) a nakonec koupelna (sprchový kout, umyvadlo, fén) plus samostatná toaleta."
+sectionDescriptionUndertitleTwo: "V patře"
+sectionDescriptionUndertitleTwoText: "V horním patře je centrální otevřený prostor s dvěma křesílky, 1/2 ložnice (2x samostatné lůžko), 1/3 ložnice (1x dvoulůžko, 1x samostatné lůžko), dětská postýlka včetně peřinek."
+sectionDescriptionFamilyBold: "Ideální pro rodiny s dětmi"
+sectionDescriptionFamily: " - v zimě možnost bobování, v létě hry na zahradě a v okolí, popřípadě koupání v bazénu. Chata je ve velmi klidné části obce s minimálním provozem."
+sectionDescriptionSurroundingsTitle: "Okolí chalupy"
+sectionDescriptionSurroundings: "U objektu je velký, udržovaný zatravněný pozemek. Venkovní zastřešená terasa s posezením a grilem, na pozemku i ohniště. V horkých letních dnech zajisté využijete nadzemní bazén (průměr 5 m, hloubka 1,2 m), pískoviště a houpačku pro děti. Pro Vaše auto jsou k dispozici parkovací místa."
+
+iconsDescriptionFaimly: "Ideální pro rodiny s dětmi"
+iconsDescriptionFireplace: "Vnitřní i venkovní krb"
+iconsDescriptionWiFi: "Wi-Fi pokrytí"
+iconsDescriptionPool: "Bazén u chaty"
+iconsDescriptionPets: "Žádní domácí mazlíčci"
+iconsDescriptionEnergy: "Energie není v ceně"
+
+
+sectionSurroundingsTitle: "Popis okolí"
+sectionSurroundingsText: "Ve městě je možnost zahrát si tenis či si odpočinout v sauně a solné jeskyni. Krytý bazén i letní koupaliště je v nedalekém Trutnově (15 km), kde je možnost i dalšího sportovního vyžití. Již od chaty je možnost napojení na spoustu skvěle značených cyklotras, v zimě tras pro běžecké lyžování. Značení pro pěší turistiku je samozřejmostí!"
+sectionSurroundingsSkiingTitle: "Lyžování"
+sectionSurroundingsSkiingText: "Nedaleko chaty (4 km) jsou dva lyžařské areály v Prkenném dole – 7 sjezdovek, 4 vleky, trasy všech obtížností, celková délka tras přes 5 km. Vhodné i pro úplné začátečníky a děti – lyžařské školy v místě Většina sjezdovek je uměle zasněžována. Možnost večerního lyžování. Pro nelyžaře je možné využít například snowtubingu nebo posezení v občerstvení u vlaků. Dále možnost využití ostatních areálů. Jánské lázně (20 km), Pec pod Sněžkou (25 km), Špindlerův mlýn, ..."
+sectionSurroundingsTripsTitle: "Výlety"
+sectionSurroundingsTripsText: "Adršpašsko-teplické skály 31 km; Janské Lázně – Černá hora 20 km; Pec pod Sněžkou 24 km; hraniční přechod Lubawka 4 km; kraj pohádek Boženy Němcové - Ratibořice 36 km (zámek, Staré bělidlo, mlýn); vodní nádrž Rozkoš - windsurfing, plachtění, vodní lyže, tobogán, letní kino, koupání; ZOO-Safari ve Dvoře Králové nad Labem 31 km; zámky v Náchodě a Novém Městě nad Metují 50 až 60 km; horské středisko Karpacz v Polsku 45 km."
+
+iconsSurroundingsSki: "Dva lyžařské vleky v místě"
+iconsSurroundingsBike: "Mnoho značených cyklotras"
+iconsSurroundingsBus: "Pravidelné autobusové spoje z města"
+iconsSurroundingsShop: "Několik místních obchodů"
+iconsSurroundingsRestaurant: "Restaurace ve městě"
+
+sectionReservationTitle: "Rezervace"
+sectionReservationFromTo: "Od - Do"
+sectionReservationPrice: "Cena"
+sectionReservationOrder: "Objednávka"
+sectionReservationOrderRequest: "Zarezervovat"
+
+
+sectionContactTitle: "Kontakt"
+sectionContactFormName: "Jméno"
+sectionContactFormNamePlaceholder: "Vaše jméno"
+sectionContactFormEmail: "Email"
+sectionContactFormEmailPlaceholder: "Váš email"
+sectionContactFormMessage: "Zpráva"
+sectionContactFormMessagePlaceholder: "Vaše zpráva"
+sectionContactFormSubmit: "Odeslat zprávu"

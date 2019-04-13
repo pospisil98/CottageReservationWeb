@@ -1,0 +1,172 @@
+{block content}
+
+        {foreach $flashes as $flash}
+            <div class="row">
+            <div class="alert alert-{$flash->type} alert-dismissable text-center col-md-8 col-md-offset-2">
+                <span class="close" data-dismiss="alert" onclick="console.log('click');">&times;</span>
+                {$flash->message}
+            </div>
+            </div>
+        {/foreach}
+<section id="priceSection" class="manage-section text-center">
+    <div class="container">
+        <div class="heading-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="section-heading">
+                            <h2>Změna ceny termínu</h2>
+                            <i class="fa fa-2x fa-angle-down"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="reservation-table">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th class="col-md-5">Od - Do</th>
+                            <th class="col-md-2">Cena</th>
+                            <th class="col-md-5">Změnit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach $fromToArray as $item}
+                            <tr class="{$item['disabled']}">
+                                <td>{date("d.m.Y", $item["from"])} - {date("d.m.Y", $item["to"])}</td>
+                                <td>{number_format($item['price'], 0, ',', ' ')} CZK</td>
+                                <td><a href onclick="triggerChangePriceModal({$item['from']}, {$item['to']}, {$item['price']})">Změnit</a></td>
+                            </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- MODAL WINDOW SECTION -->
+<section class="text-center modalWindow">
+        <form n:name=changePriceForm method="post" role="form" class="reserve-form">
+            <input id="hiddenFrom" n:name="from" type="hidden" value="">
+            <input id="hiddenTo" n:name="to" type="hidden" value="">
+            <div class="form-group">
+                <label for="price">Nová cena</label>
+                <input type="text" n:name="price" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label>Termín</label>
+                <div>Od: <b id="fromReadable"></b> Do: <b id="toReadable"></b></div>
+                <div>Cena: <b id="price"></b></div>
+                <a n:href="Manage:default">Změnit termín</a>
+            </div>
+            <div class="form-group">
+                <input n:name=submit class="btn reserve-submit" type="submit" value="Změnit cenu"/>
+            </div>
+        </form>
+</section>
+<!-- /MODAL WINDOW SECTION -->
+
+
+<section id="verify" class="manage-section text-center">
+    <div class="container">
+        <div class="heading-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="section-heading">
+                            <h2>Neověřené rezervace</h2>
+                            <i class="fa fa-2x fa-angle-down"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="reservation-table">
+                    <table id="manage-reservation-table" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th class="col-md-4">Od - Do</th>
+                            <th class="col-md-2">Zájemce</th>
+                            <th class="col-md-4">Ověřit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach $unverifiedReservations as $reservation}
+                            <tr class="{$item['disabled']}">
+                                <td>{date("d.m.Y", $reservation["fromTimestamp"])} - {date("d.m.Y", $reservation["toTimestamp"])}</td>
+                                <td>{$reservation["name"]}</td>
+                                <td><a n:href="Manage:Verify $reservation['fromTimestamp'],$reservation['toTimestamp']">Ověřit</a></td>
+                            </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="storno" class="manage-section text-center">
+    <div class="container">
+        <div class="heading-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="section-heading">
+                            <h2>Ověřené rezervace</h2>
+                            <i class="fa fa-2x fa-angle-down"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="reservation-table">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th class="col-md-4">Od - Do</th>
+                            <th class="col-md-2">Zájemce</th>
+                            <th class="col-md-4">Zrušit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach $verifiedReservations as $reservation}
+                            <tr class="{$item['disabled']}">
+                                <td>{date("d.m.Y", $reservation["fromTimestamp"])} - {date("d.m.Y", $reservation["toTimestamp"])}</td>
+                                <td>{$reservation["name"]}</td>
+                                <td><a href onclick="triggerStornoModal({$reservation['fromTimestamp']}, {$reservation['toTimestamp']})">Zrušit</a></td>
+                            </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL WINDOW SECTION -->
+<section id="stornoModal" class="text-center modalWindow">
+        <form n:name=stornoForm method="post" role="form" class="reserve-form">
+            <h2>Opravdu?</h2>
+            <input id="hiddenFromStorno" n:name="from" type="hidden" value="">
+            <input id="hiddenToStorno" n:name="to" type="hidden" value="">
+
+            <input n:name=submit class="btn btn-success" type="submit" value="Ano"/>
+            <button class="btn btn-danger" onclick="event.preventDefault();$('#stornoModal').iziModal('close');">Ne</button>
+        </form>
+</section>
+<!-- /MODAL WINDOW SECTION -->

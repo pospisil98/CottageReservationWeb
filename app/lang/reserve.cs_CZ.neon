@@ -1,0 +1,11 @@
+heading: "Rezervace ubytování"
+
+name: "Jméno a příjmení"
+phone: "Telefonní číslo"
+peopleCount: "Počet lidí"
+message: "Poznámka"
+term: "Termín"
+from: "Od"
+to: "Do"
+change: "Změnit"
+submit: "Rezervovat"

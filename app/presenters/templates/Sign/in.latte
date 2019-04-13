@@ -1,0 +1,27 @@
+{block content}
+<div class="container">
+    <section class="signin-section text-center">
+        <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+        <form n:name=signInForm method="post" role="form" class="signInForm">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="username">
+                        Přihlašovací jméno</label>
+                    <input type="text" n:name=username class="form-control" id="name" placeholder="Přihlašovací jméno"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Heslo</label>
+                    <div class="form-group">
+                        <input type="password" class="form-control" n:name=password id="email" placeholder="Heslo"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-skin" id="btnContactUs" n:name=submit>Přihlásit</button>
+            </div>
+        </form>
+    </section>
+</div>

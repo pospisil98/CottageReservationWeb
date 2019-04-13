@@ -1,0 +1,40 @@
+{block content}
+<section class="reserve-section">
+    <div class="container text-center">
+        <h1>{_ reserve.heading}</h1>
+
+        <form n:name=reservationForm method="post" role="form" class="col-md-offset-3 col-md-6 reserve-form">
+            <input n:name="from" type="hidden" value="{$from}">
+            <input n:name="to" type="hidden" value="{$to}">
+            <div class="form-group">
+                <label for="name">{_ reserve.name}</label>
+                <input type="text" n:name="name" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" n:name=email type="email" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="phone">{_ reserve.phone}</label>
+                <input id="phone" n:name=phone type="number" class="form-control  no-spin"/>
+            </div>
+            <div class="form-group">
+                <label for="peopleCount">{_ reserve.peopleCount}</label>
+                <input id="peopleCount" n:name=peopleCount type="number" class="form-control" min="0"/>
+            </div>
+            <div class="form-group">
+                <label for="message">{_ reserve.message}</label>
+                <textarea id="message" n:name=message class="form-control" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <label>{_ reserve.term}</label>
+                <div>{_ reserve.from}: <b>{date("d.m.Y", $from)}</b> {_ reserve.to}: <b>{date("d.m.Y", $to)}</b></div>
+                <a n:href="Homepage:default#reservation">{_ reserve.change}</a>
+            </div>
+            <div class="form-group">
+                <input n:name=submit class="btn reserve-submit" type="submit" value="{_ reserve.submit}"/>
+            </div>
+        </form>
+
+    </div>
+</section>

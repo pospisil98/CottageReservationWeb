@@ -1,0 +1,62 @@
+.reserve-section{
+    padding-top: 110px;
+    padding-bottom: 110px;
+    display: block;
+    position: relative;
+    z-index: 120;
+}
+
+.reserve-form{
+    background-color: #f8f8f8;
+    padding: 3em;
+    border-radius: 15px;
+}
+
+.reserve-form textarea{
+    resize: none;
+    overflow: auto;
+}
+
+.reserve-form input{
+    text-align: center;
+}
+
+.no-spin::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+    -moz-appearance:textfield !important;
+}
+
+.reserve-submit{
+    margin-top: 2Yem;
+    margin-bottom: -2em;
+}
+
+/*----- SUCCESS AND FAILURE ----------*/
+.sucfail-section{
+    padding-top: 110px;
+    padding-bottom: 110px;
+    display: block;
+    position: relative;
+    z-index: 120;
+    height: 100vh;
+}
+
+.svg-like{
+    width: 20%;
+}
+
+.svg-dislike{
+    -moz-transform: scale(1, -1);
+-webkit-transform: scale(1, -1);
+-o-transform: scale(1, -1);
+-ms-transform: scale(1, -1);
+transform: scale(1, -1);
+}
+
+.reserved-state-message{
+    padding-top: 5em;
+    display: inline-block;
+    width: 60%;
+    text-align: justify-center;
+}

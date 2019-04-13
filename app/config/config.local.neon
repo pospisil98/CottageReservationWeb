@@ -1,0 +1,10 @@
+parameters:
+
+database:
+	dsn: 'mysql:host=localhost;dbname=cottage'
+	user: root
+	password: root
+
+translation:
+    default: cs
+    fallback: [cs_CZ, cs]

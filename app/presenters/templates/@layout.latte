@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{ifset title}{include title|stripHtml} | {/ifset}{_ layout.title}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{$basePath}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="{$basePath}/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{$basePath}/css/animate.css" rel="stylesheet"/>
+    <!-- Squad theme CSS -->
+    <link href="{$basePath}/css/style.css" rel="stylesheet">
+    <link href="{$basePath}/color/default.css" rel="stylesheet">
+
+    <!-- lightbox CSS -->
+    <link href="{$basePath}/css/lightbox.css" rel="stylesheet">
+
+    <!-- izimodal CSS and JS -->
+    <link href="{$basePath}/css/iziModal.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- Preloader -->
+<!--<div id="preloader">
+  <div id="load"></div>
+</div>-->
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a id="heading" class="navbar-brand" href="index.html">
+                <h1>{_ layout.title}</h1>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            {ifCurrent :Manage:default}
+                <ul class="nav navbar-nav">
+                <li class="active"><a href="#priceSection">Změna ceny</a></li>
+                <li><a href="#verify">Ověření</a></li>
+                <li><a href="#storno">Storno</a></li>
+                <li><a n:href="Sign:out">Odhlášení</a></li>
+                </ul>
+            {else}
+                <ul class="nav navbar-nav">
+                    <li class="active">{ifCurrent :Homepage:default}<a href="#intro">{else}<a n:href="Homepage:default#intro">{/ifCurrent}{_ layout.home}</a></li>
+                    <li>{ifCurrent :Homepage:default}<a href="#descriptionCottage">{else}<a n:href="Homepage:default#descriptionCottage">{/ifCurrent}{_ layout.description}</a></li>
+                    <li>{ifCurrent :Homepage:default}<a href="#reservation">{else}<a n:href="Homepage:default#reservation">{/ifCurrent}{_ layout.reservation}</a></li>
+                    <li>{ifCurrent :Homepage:default}<a href="#contact">{else}<a n:href="Homepage:default#contact">{/ifCurrent}{_ layout.contact}</a></li>
+                    {foreach $languages as $lang}
+                        {if $iterator->first}
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="navimg" src="{$basePath}/img/flags/{$lang}.png"><b class="caret"/></b></a>
+                            <ul class="dropdown-menu">
+                        {else}
+                            <li><a n:href="default locale=>$lang"><img class="navimg" src="{$basePath}/img/flags/{$lang}.png">{$lang}</a></li>
+                        {/if}
+                    {/foreach}
+                            </ul>
+                        </li>
+            </ul>
+        {/ifCurrent}
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+{include content}
+
+<!-- Core JavaScript Files -->
+{block scripts}
+	<script src="https://nette.github.io/resources/js/netteForms.min.js" type="text/javascript"></script>
+    <script src="{$basePath}/js/jquery-3.2.0.min.js" type="text/javascript"></script>
+    <script src="{$basePath}/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="{$basePath}/js/iziModal.min.js" type="text/javascript"></script>
+    <!-- Lightbox JS -->
+    <script src="{$basePath}/js/lightbox/lightbox.min.js" type="text/javascript"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{$basePath}/js/custom.js" type="text/javascript"></script>
+{/block}
+
+</body>
+
+</html>

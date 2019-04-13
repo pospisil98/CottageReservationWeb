@@ -1,0 +1,16 @@
+.manage-section{
+    padding-top: 110px;
+    display: block;
+    position: relative;
+    z-index: 120;
+}
+
+#manage-reservation-table{
+        margin-bottom: 0 !important;
+}
+
+.alert{
+    z-index: 150;
+    position: fixed;
+    top: 20%;
+}

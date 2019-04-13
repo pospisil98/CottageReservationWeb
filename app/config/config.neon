@@ -1,0 +1,21 @@
+parameters:
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+extensions:
+    translation: Kdyby\Translation\DI\TranslationExtension
+
+session:
+	expiration: 14 days
+
+services:
+    router: App\RouterFactory::createRouter
+    authenticator: Nette\Security\SimpleAuthenticator([
+                admin: admin
+            ])
+    - App\Model\ReservationManager
+    - App\Model\ManageManager

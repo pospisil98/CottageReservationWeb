@@ -1,0 +1,11 @@
+heading: "Accommodation reservation"
+
+name: "Name and surname"
+phone: "Phone number"
+peopleCount: "Number of people"
+message: "Note"
+term: "Term"
+from: "From"
+to: "To"
+change: "Change"
+submit: "Book"
